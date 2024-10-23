@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES2023", // Versão do ECMAScript a ser usada
+    "module": "CommonJS", // Sistema de módulos para compatibilidade
+    "outDir": "./dist", // Diretório de saída dos arquivos compilados
+    "rootDir": "./src", // Diretório de entrada dos arquivos de origem
+    "strict": true, // Habilita verificações rigorosas
+    "esModuleInterop": true // Suporte à interoperabilidade de módulos
+  },
+  "include": [
+    "src/**/*.ts",  // Inclui todos os arquivos TypeScript na pasta src
+    "src/presentation/controllers/signup.ts", // Inclui o arquivo signup.ts específico
+    "signup.spec.ts" // Inclui o arquivo de testes signup.spec.ts
+  ],
+  "exclude": ["node_modules"] // Exclui a pasta node_modules da compilação
+}

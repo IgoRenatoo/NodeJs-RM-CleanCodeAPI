@@ -1,0 +1,20 @@
+{
+  "env": {
+    "browser": true, // Define o ambiente do navegador
+    "es2023": true, // Define o ambiente ES2023
+    "jest": true // Define o ambiente Jest para testes
+  },
+  "extends": [
+    "standard-with-typescript" // Oferecendo uma abordagem unificada de estilo e boas práticas tanto para JavaScript quanto TypeScript.
+  ],
+  "parser": "@typescript-eslint/parser", // Define o parser para TypeScript
+  "parserOptions": {
+    "ecmaVersion": 12, // Define a versão do ECMAScript
+    "sourceType": "module", // Define o tipo de módulo como ES
+    "project": "./tsconfig.json" // Especifica o arquivo tsconfig.json
+  },
+  "plugins": [
+    "@typescript-eslint" // Adiciona o plugin do TypeScript
+  ],
+  "rules": {} // Aqui podem ser definidas regras específicas de linting
+}
