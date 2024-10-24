@@ -16,5 +16,7 @@
   "plugins": [
     "@typescript-eslint" // Adiciona o plugin do TypeScript
   ],
-  "rules": {} // Aqui podem ser definidas regras específicas de linting
+  "rules": { // Aqui podem ser definidas regras específicas de linting
+    "@typescript-eslint/strict-boolean-expressions": "off" 
+  }
 }
