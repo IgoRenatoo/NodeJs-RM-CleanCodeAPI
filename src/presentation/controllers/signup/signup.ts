@@ -1,5 +1,5 @@
 import { MissingParamError, InvalidParamError } from '../../errors'
-import { badRequest, ok, serverError } from '../../helpers/http-helper'
+import { badRequest, serverError, ok } from '../../helpers/http-helper'
 import { type IHttpResponse, type IHttpRequest, type IController, type IEmailValidator, type IAddAccount } from './signup-protocols'
 
 export class SignUpController implements IController {
@@ -11,7 +11,7 @@ export class SignUpController implements IController {
     this.addAccount = addAccount
   }
 
-  handle (httpRequest: IHttpRequest): IHttpResponse {
+  async handle (httpRequest: IHttpRequest): Promise<IHttpResponse> {
     try {
       const requiredFields = ['name', 'email', 'password', 'passwordConfirmation']
       for (const field of requiredFields) {
@@ -29,7 +29,7 @@ export class SignUpController implements IController {
       if (!isValid) {
         return badRequest(new InvalidParamError('invalidEmails'))
       } else {
-        const account = this.addAccount.add({ name, email, password })
+        const account = await this.addAccount.add({ name, email, password })
         return ok(account)
       }
     } catch (error) {
