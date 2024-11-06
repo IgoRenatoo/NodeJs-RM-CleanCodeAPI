@@ -9,7 +9,7 @@
   },
   "include": [
     "src/**/*.ts",  // Inclui todos os arquivos TypeScript na pasta src
-    "src/presentation/controllers/signup.ts", // Inclui o arquivo signup.ts específico
+    "src/presentation/controllers/signup/signup.ts", // Inclui o arquivo signup.ts específico
     "signup.spec.ts" // Inclui o arquivo de testes signup.spec.ts
   ],
   "exclude": ["node_modules"] // Exclui a pasta node_modules da compilação
