@@ -1,5 +1,5 @@
 import { type IHttpResponse } from '../protocols/http'
-import { ServerError } from '../errors/server-error'
+import { ServerError } from '../errors'
 import { type IAddAccountModel } from '../controllers/signup/signup-protocols'
 
 export const badRequest = (error: Error): IHttpResponse => ({ statusCode: 400, body: error })

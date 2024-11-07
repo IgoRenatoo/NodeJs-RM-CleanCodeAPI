@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch",
-    "lint": "eslint src/**/*.ts --max-warnings=0",
-    "test:staged": "jest"
+    "test": "jest --silent --runInBand",
+    "test:verbose": "jest --runInBand",
+    "test:ci": "jest --coverage",
+    "lint": "eslint src/**/*.ts"
   },
   "keywords": [],
   "author": "",
