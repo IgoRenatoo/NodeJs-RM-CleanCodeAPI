@@ -11,7 +11,7 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "*.ts": [
+    "*.{js,ts}": [
       "eslint 'src/**' --fix"
     ]
   },
@@ -21,6 +21,8 @@
     "typescript": "^5.6.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@eslint/js": "^9.15.0",
     "@types/express": "^5.0.0",
     "@types/jest": "^29.5.14",
