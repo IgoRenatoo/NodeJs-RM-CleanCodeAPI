@@ -1,5 +1,0 @@
-node_modules/
-.env/
-coverage/
-.huskyrc.json
-jest.config.ts
